@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>サンフラ攻略アプリ（A方式スターター）</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>サンフラ攻略アプリ（A方式スターター）</h1>
+    <p>スマスロ総台数: <strong>363台</strong> / URLを入れて取得、またはHTMLを貼り付けて解析</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>1. URL入力（A方式）</h2>
+      <label>ホール日別URL</label>
+      <input id="dailyUrl" type="text" placeholder="https://www.slorepo.com/hole/.../20260311/" />
+      <label>機種個別URL（任意）</label>
+      <input id="machineUrl" type="text" placeholder="https://www.slorepo.com/hole/.../20260311/kishu/?kishu=..." />
+      <div class="buttons">
+        <button id="fetchBtn">URLから取得</button>
+        <button id="sampleBtn">サンプル表示</button>
+      </div>
+      <p class="note">※ GitHub Pagesでは外部サイトのCORS制限でURL取得が失敗する場合があります。その場合は下のHTML貼り付けを使います。</p>
+    </section>
+
+    <section class="card">
+      <h2>2. HTML取込（CORS回避用）</h2>
+      <p class="note">貼り付けが大変な場合は、Chromeで「ページのソースを表示」→ 保存した .html ファイルを選ぶ方法が楽です。</p>
+      <label>ホール日別ページHTML</label>
+      <textarea id="dailyHtml" rows="6" placeholder="ページのHTMLを貼る"></textarea>
+      <label>機種個別ページHTML</label>
+      <textarea id="machineHtml" rows="6" placeholder="ページのHTMLを貼る"></textarea>
+      <label>ホール日別 .html ファイル</label>
+      <input id="dailyHtmlFile" type="file" accept=".html,.htm,text/html" />
+      <label>機種個別 .html ファイル</label>
+      <input id="machineHtmlFile" type="file" accept=".html,.htm,text/html" />
+      <div class="buttons">
+        <button id="parseBtn">HTMLを解析</button>
+        <button id="parseFileBtn">HTMLファイルを解析</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3. 機種一覧</h2>
+      <div id="machineSummary"></div>
+    </section>
+
+    <section class="card">
+      <h2>4. 台一覧</h2>
+      <div id="machineDetail"></div>
+    </section>
+
+    <section class="card">
+      <h2>5. 当たり台マップ（手入力補完用）</h2>
+      <div class="buttons">
+        <button id="loadConfigBtn">台数テンプレを読み込み</button>
+        <button id="exportConfigBtn">JSONを書き出し</button>
+      </div>
+      <div id="configEditor"></div>
+    </section>
+
+    <section class="card">
+      <h2>6. 次回狙い目メモ</h2>
+      <ul>
+        <li>並び候補</li>
+        <li>角2 / 角3 / 中央</li>
+        <li>前回当たり機種</li>
+        <li>今回外した機種</li>
+      </ul>
+      <textarea id="strategyMemo" rows="6" placeholder="ここにメモ"></textarea>
+    </section>
+  
+    <section class="card">
+      <h2>7. 設定入りやすい機種・台番号（暫定）</h2>
+      <p class="note">★6が最上位。ユーザー提供データベースの暫定期待度です。</p>
+      <div class="buttons">
+        <button id="loadRecoBtn">期待度を表示</button>
+      </div>
+      <div id="recommendationsView"></div>
+    </section>
+
+  
+    <section class="card">
+      <h2>8. サンフラ設定予測エンジン</h2>
+      <p class="note">過去傾向ベースで、次回の狙い機種・台番号を表示します。★6が最上位です。</p>
+      <label>稼働日タイプ</label>
+      <select id="predictionMode">
+        <option value="event">イベント日（3の付く日 / 24日 / 第一週土曜）</option>
+        <option value="normal">通常日</option>
+      </select>
+      <div class="buttons">
+        <button id="runPredictionBtn">次回予測を表示</button>
+      </div>
+      <div id="predictionView"></div>
+    </section>
+
+  
+    <section class="card">
+      <h2>11. データ保存 / 履歴DB</h2>
+      <p class="note">読み込んだ機種個別データを日付つきでブラウザ内に保存します。イベント日と前日をためていく用です。</p>
+      <label>保存日付</label>
+      <input id="saveDate" type="text" placeholder="2026-03-13" />
+      <label>保存ラベル（任意）</label>
+      <input id="saveLabel" type="text" placeholder="3の付く日 / 前日 / 通常日 など" />
+      <div class="buttons">
+        <button id="saveSessionBtn">現在の台一覧を保存</button>
+        <button id="showDbBtn">保存データを見る</button>
+        <button id="clearDbBtn">保存データを全消去</button>
+      </div>
+      <div id="dbView"></div>
+    </section>
+
+  
+    <section class="card">
+      <h2>12. 答え合わせ</h2>
+      <p class="note">期待度があったが打っていない機種はHTMLから、実際に打った機種は手入力から答え合わせできます。</p>
+
+      <h3>12-1. HTML参照で答え合わせ</h3>
+      <p class="note">機種個別ページHTMLを読み込んだ後、その結果を保存して答え合わせに使います。</p>
+      <label>答え合わせ日付</label>
+      <input id="answerDateHtml" type="text" placeholder="2026-03-13" />
+      <label>ラベル（任意）</label>
+      <input id="answerLabelHtml" type="text" placeholder="3の日答え合わせ" />
+      <div class="buttons">
+        <button id="saveHtmlAnswerBtn">現在の台一覧を答え合わせ保存</button>
+      </div>
+
+      <h3>12-2. 実戦手入力で答え合わせ</h3>
+      <label>日付</label>
+      <input id="manualDate" type="text" placeholder="2026-03-13" />
+      <label>機種名</label>
+      <input id="manualMachine" type="text" placeholder="スマスロ北斗" />
+      <label>台番号</label>
+      <input id="manualNumber" type="text" placeholder="0262" />
+      <label>総回転数</label>
+      <input id="manualGames" type="text" placeholder="6000" />
+      <label>BB</label>
+      <input id="manualBB" type="text" placeholder="50" />
+      <label>RB</label>
+      <input id="manualRB" type="text" placeholder="30" />
+      <label>差枚</label>
+      <input id="manualDiff" type="text" placeholder="+4000" />
+      <label>トロフィー</label>
+      <select id="manualTrophy">
+        <option value="">未選択</option>
+        <option value="虹トロ">虹トロ</option>
+        <option value="5以上確定トロ">5以上確定トロ</option>
+        <option value="金トロ">金トロ</option>
+        <option value="トロフィー無し">トロフィー無し</option>
+      </select>
+      <label>実際の評価</label>
+      <select id="manualResult">
+        <option value="6確">6確</option>
+        <option value="56濃厚">56濃厚</option>
+        <option value="高設定っぽい">高設定っぽい</option>
+        <option value="中間っぽい">中間っぽい</option>
+        <option value="低設定っぽい">低設定っぽい</option>
+        <option value="ハズレ">ハズレ</option>
+      </select>
+      <label>メモ</label>
+      <input id="manualMemo" type="text" placeholder="トロフィー / 示唆 / 体感など" />
+      <div class="buttons">
+        <button id="saveManualAnswerBtn">実戦データを保存</button>
+      </div>
+
+      <h3>12-3. 答え合わせ履歴</h3>
+      <div class="buttons">
+        <button id="showAnswersBtn">答え合わせ履歴を表示</button>
+        <button id="clearAnswersBtn">答え合わせ履歴を全消去</button>
+      </div>
+      <div id="answersView"></div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
