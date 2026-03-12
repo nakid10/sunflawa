@@ -4,7 +4,35 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>サンフラ攻略アプリ（A方式スターター）</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+
+body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background:#f6f7fb; color:#222; }
+header { background:#1f3b73; color:white; padding:20px; }
+main { max-width:1100px; margin:20px auto; padding:0 12px; }
+.card { background:white; border-radius:12px; padding:16px; margin-bottom:16px; box-shadow:0 2px 8px rgba(0,0,0,.08); }
+h1,h2 { margin-top:0; }
+input[type=text], textarea { width:100%; box-sizing:border-box; margin:6px 0 12px; padding:10px; border:1px solid #cfd4dc; border-radius:8px; }
+button { padding:10px 14px; border:none; border-radius:8px; background:#1f3b73; color:white; cursor:pointer; }
+button:hover { opacity:.92; }
+.buttons { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0; }
+table { width:100%; border-collapse:collapse; }
+th, td { border:1px solid #d7dce5; padding:8px; text-align:left; }
+th { background:#eef2f8; }
+.note { font-size:.92rem; color:#555; }
+.grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap:8px; margin-top:10px; }
+details { margin-bottom:10px; border:1px solid #d7dce5; border-radius:8px; padding:10px; background:#fafbff; }
+summary { font-weight:700; cursor:pointer; }
+
+.tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+.tab { background:#d8e1f0; color:#1f3b73; }
+.tab.active { background:#1f3b73; color:#fff; }
+.tabpanel { margin-top:8px; }
+
+input[type=file] { width:100%; margin:6px 0 12px; }
+
+select { width:100%; box-sizing:border-box; margin:6px 0 12px; padding:10px; border:1px solid #cfd4dc; border-radius:8px; background:#fff; }
+
+</style>
 </head>
 <body>
   <header>
@@ -13,6 +41,7 @@
   </header>
 
   <main>
+<section class="card"><p class="note">表示崩れ対策版です。CSS・JS・設定JSONを index.html に埋め込んであります。</p></section>
     <section class="card">
       <h2>1. URL入力（A方式）</h2>
       <label>ホール日別URL</label>
@@ -176,6 +205,2242 @@
 
   </main>
 
-  <script src="app.js"></script>
+  
+
+  <script id="embedded-recommendations" type="application/json">
+{
+  "version": "2026-03-13",
+  "note": "ユーザー提供の実戦情報・配置情報ベースの暫定期待度。★6が最上位。",
+  "rules": [
+    "少数台（3〜6台）は1台強めを想定",
+    "メイン機種は中央〜角2/3、または並びを想定",
+    "3の付く日・24日・第一週土曜を強日として想定"
+  ],
+  "machines": [
+    {
+      "name": "スマスロ北斗",
+      "stars": 5,
+      "numbers": [
+        "0257",
+        "0258",
+        "0259",
+        "0260",
+        "0261",
+        "0262",
+        "0263",
+        "0264"
+      ],
+      "memo": "並び実績寄り。262で設定6確認あり。"
+    },
+    {
+      "name": "新台カバネリ",
+      "stars": 5,
+      "numbers": [
+        "0273",
+        "0274",
+        "0275",
+        "0276",
+        "0277"
+      ],
+      "memo": "中央並び寄り。456報告あり。"
+    },
+    {
+      "name": "ヴァルヴレイヴ2",
+      "stars": 6,
+      "numbers": [
+        "0159",
+        "0160",
+        "0161"
+      ],
+      "memo": "並び実績強め。"
+    },
+    {
+      "name": "旧ヴァルヴレイヴ",
+      "stars": 5,
+      "numbers": [
+        "0170",
+        "0171",
+        "0172",
+        "0173"
+      ],
+      "memo": "中央ライン。"
+    },
+    {
+      "name": "東京喰種",
+      "stars": 5,
+      "numbers": [
+        "0101",
+        "0102",
+        "0103",
+        "0104",
+        "0105",
+        "0106"
+      ],
+      "memo": "RED ZONE中央寄り。"
+    },
+    {
+      "name": "モンキーターンV",
+      "stars": 5,
+      "numbers": [
+        "0185",
+        "0186",
+        "0187",
+        "0188",
+        "0189"
+      ],
+      "memo": "中央5台。"
+    },
+    {
+      "name": "マギレコ",
+      "stars": 4,
+      "numbers": [
+        "0199",
+        "0200",
+        "0201",
+        "0202"
+      ],
+      "memo": "中央寄り。"
+    },
+    {
+      "name": "ゴッドイーター",
+      "stars": 4,
+      "numbers": [
+        "0209",
+        "0210",
+        "0211",
+        "0212"
+      ],
+      "memo": "中央寄り。"
+    },
+    {
+      "name": "新鬼武者3",
+      "stars": 4,
+      "numbers": [
+        "0219",
+        "0220",
+        "0221"
+      ],
+      "memo": "中央寄り。"
+    },
+    {
+      "name": "北斗転生2",
+      "stars": 5,
+      "numbers": [
+        "0242",
+        "0243",
+        "0244",
+        "0245"
+      ],
+      "memo": "万枚寄り機種。"
+    },
+    {
+      "name": "バンドリ",
+      "stars": 6,
+      "numbers": [
+        "0064"
+      ],
+      "memo": "設定6確認あり（ユーザー情報）。"
+    },
+    {
+      "name": "無職転生",
+      "stars": 5,
+      "numbers": [
+        "0050"
+      ],
+      "memo": "少数台の本命中央。"
+    },
+    {
+      "name": "戦国乙女",
+      "stars": 5,
+      "numbers": [
+        "0054"
+      ],
+      "memo": "少数台本命。"
+    },
+    {
+      "name": "スーパーブラックジャック",
+      "stars": 5,
+      "numbers": [
+        "0079"
+      ],
+      "memo": "少数台・中央本命。"
+    },
+    {
+      "name": "ゾンビランドサガ",
+      "stars": 4,
+      "numbers": [
+        "0061"
+      ],
+      "memo": "設定あり確認。"
+    },
+    {
+      "name": "防振り",
+      "stars": 5,
+      "numbers": [
+        "0046"
+      ],
+      "memo": "少数台中央。"
+    },
+    {
+      "name": "メダル機カバネリ",
+      "stars": 6,
+      "numbers": [
+        "0390",
+        "0393"
+      ],
+      "memo": "4台中2台配分想定。"
+    },
+    {
+      "name": "エウレカセブン",
+      "stars": 6,
+      "numbers": [
+        "0394",
+        "0397"
+      ],
+      "memo": "4台中2台配分想定。"
+    },
+    {
+      "name": "キングハナハナ",
+      "stars": 4,
+      "numbers": [
+        "0564",
+        "0565",
+        "0566",
+        "0567"
+      ],
+      "memo": "おすすめ機種。中央寄り。"
+    },
+    {
+      "name": "スターハナハナ",
+      "stars": 3,
+      "numbers": [
+        "0577",
+        "0578"
+      ],
+      "memo": "並び島。中央寄り。"
+    },
+    {
+      "name": "ドラゴンハナハナ閃光",
+      "stars": 3,
+      "numbers": [
+        "0517",
+        "0518",
+        "0519"
+      ],
+      "memo": "中央寄り。"
+    }
+  ]
+}
+  </script>
+  <script id="embedded-config" type="application/json">
+{
+  "hallName": "スーパースロットサンフラワー",
+  "smartSlotTotal": 363,
+  "machines": [
+    {
+      "name": "新台カバネリ",
+      "count": 15,
+      "numbers": [
+        "0265",
+        "0266",
+        "0267",
+        "0268",
+        "0269",
+        "0270",
+        "0271",
+        "0272",
+        "0273",
+        "0274",
+        "0275",
+        "0276",
+        "0277",
+        "0278",
+        "0279"
+      ]
+    },
+    {
+      "name": "東京喰種",
+      "count": 29,
+      "numbers": [
+        "0071",
+        "0072",
+        "0073",
+        "0074",
+        "0075",
+        "0091",
+        "0092",
+        "0093",
+        "0094",
+        "0095",
+        "0096",
+        "0097",
+        "0098",
+        "0099",
+        "0100",
+        "0101",
+        "0102",
+        "0103",
+        "0104",
+        "0105",
+        "0106",
+        "0107",
+        "0108",
+        "0109",
+        "0110",
+        "0111",
+        "0112",
+        "0113",
+        "0114"
+      ]
+    },
+    {
+      "name": "モンキーターンV",
+      "count": 19,
+      "numbers": [
+        "0177",
+        "0178",
+        "0179",
+        "0180",
+        "0181",
+        "0182",
+        "0183",
+        "0184",
+        "0185",
+        "0186",
+        "0187",
+        "0188",
+        "0189",
+        "0190",
+        "0191",
+        "0192",
+        "0193",
+        "0194",
+        "0195"
+      ]
+    },
+    {
+      "name": "スマスロ北斗",
+      "count": 16,
+      "numbers": [
+        "0249",
+        "0250",
+        "0251",
+        "0252",
+        "0253",
+        "0254",
+        "0255",
+        "0256",
+        "0257",
+        "0258",
+        "0259",
+        "0260",
+        "0261",
+        "0262",
+        "0263",
+        "0264"
+      ]
+    },
+    {
+      "name": "ヴァルヴレイヴ2",
+      "count": 14,
+      "numbers": [
+        "0121",
+        "0122",
+        "0123",
+        "0124",
+        "0125",
+        "0126",
+        "0157",
+        "0158",
+        "0159",
+        "0160",
+        "0161",
+        "0162",
+        "0163",
+        "0164"
+      ]
+    },
+    {
+      "name": "旧ヴァルヴレイヴ",
+      "count": 12,
+      "numbers": [
+        "0165",
+        "0166",
+        "0167",
+        "0168",
+        "0169",
+        "0170",
+        "0171",
+        "0172",
+        "0173",
+        "0174",
+        "0175",
+        "0176"
+      ]
+    },
+    {
+      "name": "北斗転生2",
+      "count": 12,
+      "numbers": [
+        "0237",
+        "0238",
+        "0239",
+        "0240",
+        "0241",
+        "0242",
+        "0243",
+        "0244",
+        "0245",
+        "0246",
+        "0247",
+        "0248"
+      ]
+    },
+    {
+      "name": "かぐや様は告らせたい",
+      "count": 11,
+      "numbers": [
+        "0146",
+        "0147",
+        "0148",
+        "0149",
+        "0150",
+        "0151",
+        "0152",
+        "0153",
+        "0154",
+        "0155",
+        "0156"
+      ]
+    },
+    {
+      "name": "モンハンライズ",
+      "count": 12,
+      "numbers": [
+        "0285",
+        "0286",
+        "0287",
+        "0288",
+        "0289",
+        "0290",
+        "0291",
+        "0292",
+        "0293",
+        "0294",
+        "0295",
+        ""
+      ]
+    },
+    {
+      "name": "からくりサーカス",
+      "count": 10,
+      "numbers": [
+        "0133",
+        "0134",
+        "0135",
+        "0136",
+        "0137",
+        "0138",
+        "0139",
+        "0140",
+        "0141",
+        "0142"
+      ]
+    },
+    {
+      "name": "マギレコ",
+      "count": 10,
+      "numbers": [
+        "0196",
+        "0197",
+        "0198",
+        "0199",
+        "0200",
+        "0201",
+        "0202",
+        "0203",
+        "0204",
+        "0205"
+      ]
+    },
+    {
+      "name": "ゴッドイーター",
+      "count": 10,
+      "numbers": [
+        "0206",
+        "0207",
+        "0208",
+        "0209",
+        "0210",
+        "0211",
+        "0212",
+        "0213",
+        "0214",
+        "0215"
+      ]
+    },
+    {
+      "name": "新鬼武者3",
+      "count": 10,
+      "numbers": [
+        "0216",
+        "0217",
+        "0218",
+        "0219",
+        "0220",
+        "0221",
+        "0222",
+        "0223",
+        "0224",
+        ""
+      ]
+    },
+    {
+      "name": "アズレン",
+      "count": 8,
+      "numbers": [
+        "0083",
+        "0084",
+        "0085",
+        "0086",
+        "0087",
+        "0088",
+        "0089",
+        "0090"
+      ]
+    },
+    {
+      "name": "スーパーブラックジャック",
+      "count": 7,
+      "numbers": [
+        "0076",
+        "0077",
+        "0078",
+        "0079",
+        "0080",
+        "0081",
+        "0082"
+      ]
+    },
+    {
+      "name": "いざ！番長",
+      "count": 7,
+      "numbers": [
+        "0230",
+        "0231",
+        "0232",
+        "0233",
+        "0234",
+        "0235",
+        "0236"
+      ]
+    },
+    {
+      "name": "東リべ",
+      "count": 6,
+      "numbers": [
+        "0025",
+        "0026",
+        "0027",
+        "0028",
+        "0029",
+        "0030"
+      ]
+    },
+    {
+      "name": "ToLOVEる",
+      "count": 5,
+      "numbers": [
+        "0011",
+        "0012",
+        "0013",
+        "0014",
+        "0015"
+      ]
+    },
+    {
+      "name": "吉宗",
+      "count": 5,
+      "numbers": [
+        "0016",
+        "0017",
+        "0018",
+        "0019",
+        "0020"
+      ]
+    },
+    {
+      "name": "銭形5",
+      "count": 5,
+      "numbers": [
+        "0039",
+        "0040",
+        "0041",
+        "0042",
+        "0043"
+      ]
+    },
+    {
+      "name": "防振り",
+      "count": 5,
+      "numbers": [
+        "0044",
+        "0045",
+        "0046",
+        "0047",
+        "0048"
+      ]
+    },
+    {
+      "name": "戦国乙女",
+      "count": 5,
+      "numbers": [
+        "0052",
+        "0053",
+        "0054",
+        "0055",
+        "0056"
+      ]
+    },
+    {
+      "name": "レヴュースタァライト",
+      "count": 5,
+      "numbers": [
+        "0066",
+        "0067",
+        "0068",
+        "0069",
+        "0070"
+      ]
+    },
+    {
+      "name": "ゴブスレ2",
+      "count": 5,
+      "numbers": [
+        "0225",
+        "0226",
+        "0227",
+        "0228",
+        "0229"
+      ]
+    },
+    {
+      "name": "SAO",
+      "count": 5,
+      "numbers": [
+        "0280",
+        "0281",
+        "0282",
+        "0283",
+        "0284"
+      ]
+    },
+    {
+      "name": "バジ天膳",
+      "count": 4,
+      "numbers": [
+        "0001",
+        "0002",
+        "0003",
+        "0004"
+      ]
+    },
+    {
+      "name": "炎炎",
+      "count": 4,
+      "numbers": [
+        "0021",
+        "0022",
+        "0023",
+        "0024"
+      ]
+    },
+    {
+      "name": "シンフォギア",
+      "count": 4,
+      "numbers": [
+        "0031",
+        "0032",
+        "0033",
+        "0034"
+      ]
+    },
+    {
+      "name": "ルパン",
+      "count": 4,
+      "numbers": [
+        "0035",
+        "0036",
+        "0037",
+        "0038"
+      ]
+    },
+    {
+      "name": "化物語",
+      "count": 4,
+      "numbers": [
+        "0115",
+        "0116",
+        "0117",
+        "0118"
+      ]
+    },
+    {
+      "name": "ディスク",
+      "count": 4,
+      "numbers": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "沖ドキデュオ",
+      "count": 4,
+      "numbers": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "エヴァBT",
+      "count": 4,
+      "numbers": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "アレックス",
+      "count": 4,
+      "numbers": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "ダリフラ",
+      "count": 4,
+      "numbers": [
+        "0130",
+        "0131",
+        "0132",
+        ""
+      ]
+    },
+    {
+      "name": "一騎当千V",
+      "count": 3,
+      "numbers": [
+        "0005",
+        "0006",
+        "0007"
+      ]
+    },
+    {
+      "name": "バイオ5",
+      "count": 3,
+      "numbers": [
+        "0008",
+        "0009",
+        "0010"
+      ]
+    },
+    {
+      "name": "無職転生",
+      "count": 3,
+      "numbers": [
+        "0049",
+        "0050",
+        "0051"
+      ]
+    },
+    {
+      "name": "ガルパン",
+      "count": 3,
+      "numbers": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "ゾンビランドサガ",
+      "count": 3,
+      "numbers": [
+        "0060",
+        "0061",
+        "0062"
+      ]
+    },
+    {
+      "name": "バンドリ",
+      "count": 3,
+      "numbers": [
+        "0063",
+        "0064",
+        "0065"
+      ]
+    },
+    {
+      "name": "ゴジエヴァ",
+      "count": 3,
+      "numbers": [
+        "0127",
+        "0128",
+        "0129"
+      ]
+    },
+    {
+      "name": "聖闘士星矢",
+      "count": 3,
+      "numbers": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "ビンゴ",
+      "count": 3,
+      "numbers": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "秘宝伝",
+      "count": 2,
+      "numbers": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "コードギアス",
+      "count": 2,
+      "numbers": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "マジハロ8",
+      "count": 2,
+      "numbers": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "D4DJ",
+      "count": 2,
+      "numbers": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "転生したら剣でした",
+      "count": 2,
+      "numbers": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "バイオヴェンデッタ",
+      "count": 2,
+      "numbers": [
+        "0376",
+        "0377"
+      ]
+    },
+    {
+      "name": "頭文字D",
+      "count": 2,
+      "numbers": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "ゴールデンカムイ",
+      "count": 2,
+      "numbers": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "ドルアーガの塔",
+      "count": 2,
+      "numbers": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "絶対衝撃",
+      "count": 2,
+      "numbers": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "シェイク",
+      "count": 2,
+      "numbers": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "クレアの秘宝伝BT",
+      "count": 2,
+      "numbers": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "デビルメイクライ5",
+      "count": 2,
+      "numbers": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "ゴジラ",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "銭形4",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "ダンベル何キロ持てる？",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "ガンダムSEED",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "にゃんこ大戦争",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "北斗無双",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "ダンバイン",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "カイジ",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "とある魔術の禁書目録",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "シンエヴァ",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "シスクエ",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "シャーマンキング",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "緑ドン",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "ワンパンマン",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "忍魂",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "咲",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "麻雀格闘倶楽部",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "七つ魔剣",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "転スラ",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "ひぐらし",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "ネオプラ",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "バーニングエクスプレス",
+      "count": 1,
+      "numbers": [
+        ""
+      ]
+    },
+    {
+      "name": "メダル機カバネリ",
+      "count": 4,
+      "numbers": [
+        "0390",
+        "0391",
+        "0392",
+        "0393"
+      ]
+    },
+    {
+      "name": "エウレカセブン",
+      "count": 4,
+      "numbers": [
+        "0394",
+        "0395",
+        "0396",
+        "0397"
+      ]
+    },
+    {
+      "name": "キングハナハナ",
+      "count": 16,
+      "numbers": [
+        "0558",
+        "0559",
+        "0560",
+        "0561",
+        "0562",
+        "0563",
+        "0564",
+        "0565",
+        "0566",
+        "0567",
+        "0568",
+        "0569",
+        "0570",
+        "0571",
+        "0572",
+        "0573"
+      ]
+    },
+    {
+      "name": "ドラゴンハナハナ閃光",
+      "count": 16,
+      "numbers": [
+        "0510",
+        "0511",
+        "0512",
+        "0513",
+        "0514",
+        "0515",
+        "0516",
+        "0517",
+        "0518",
+        "0519",
+        "0520",
+        "0521",
+        "0522",
+        "0523",
+        "0524",
+        "0525"
+      ]
+    },
+    {
+      "name": "スターハナハナ",
+      "count": 8,
+      "numbers": [
+        "0574",
+        "0575",
+        "0576",
+        "0577",
+        "0578",
+        "0579",
+        "0580",
+        "0581"
+      ]
+    }
+  ]
+}
+  </script>
+  <script>
+    window.EMBEDDED_RECOMMENDATIONS = JSON.parse(document.getElementById("embedded-recommendations").textContent);
+    window.EMBEDDED_CONFIG = JSON.parse(document.getElementById("embedded-config").textContent);
+  </script>
+
+<script>
+
+const state = {
+  machineSummary: [],
+  machineDetail: [],
+  config: null,
+};
+
+function el(id){ return document.getElementById(id); }
+
+function renderMachineSummary() {
+  const root = el("machineSummary");
+  if (!state.machineSummary.length) {
+    root.innerHTML = "<p>まだデータがありません。</p>";
+    return;
+  }
+  const rows = state.machineSummary.map((m, i) => `
+    <tr data-index="${i}">
+      <td>${m.機種名 || ""}</td>
+      <td>${m.差枚数 || ""}</td>
+      <td>${m.平均回転数 || ""}</td>
+      <td><button onclick="showDetail('${(m.機種名||"").replace(/'/g, "\\'")}')">台一覧を見る</button></td>
+    </tr>
+  `).join("");
+  root.innerHTML = `
+    <table>
+      <thead><tr><th>機種名</th><th>差枚数</th><th>平均回転数</th><th>詳細</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+
+function renderMachineDetail(machineName = "") {
+  const root = el("machineDetail");
+  const rowsRaw = machineName ? state.machineDetail.filter(x => x.機種名 === machineName) : state.machineDetail;
+  if (!rowsRaw.length) {
+    root.innerHTML = "<p>まだ台データがありません。</p>";
+    return;
+  }
+  const rows = rowsRaw.map((r) => `
+    <tr>
+      <td>${r.機種名 || ""}</td>
+      <td>${r.台番号 || ""}</td>
+      <td>${r.差枚数 || ""}</td>
+      <td>${r.総回転数 || ""}</td>
+    </tr>
+  `).join("");
+  root.innerHTML = `
+    <table>
+      <thead><tr><th>機種名</th><th>台番号</th><th>差枚数</th><th>総回転数</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+window.showDetail = renderMachineDetail;
+
+function parseNumberText(text) {
+  return text.replace(/\s+/g, " ").trim();
+}
+
+// スターター用の簡易パーサー。
+// 実データのHTMLに合わせてセレクタは今後微調整する前提。
+function parseDailyHtml(html) {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const tables = [...doc.querySelectorAll("table")];
+  const result = [];
+  for (const table of tables) {
+    const rows = [...table.querySelectorAll("tr")];
+    for (const tr of rows) {
+      const cells = [...tr.querySelectorAll("th,td")].map(td => parseNumberText(td.textContent || ""));
+      if (cells.length >= 3 && cells.some(c => c.includes("差枚")) === false) {
+        const joined = cells.join("|");
+        if (joined.match(/[台枚差G]/) || cells[0]) {
+          result.push({
+            機種名: cells[0] || "",
+            差枚数: cells[1] || "",
+            平均回転数: cells[2] || "",
+          });
+        }
+      }
+    }
+  }
+  // 重複っぽい行や空行を雑に除去
+  return result.filter(r => r.機種名 && r.差枚数);
+}
+
+function parseMachineHtml(html, machineNameHint="") {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const tables = [...doc.querySelectorAll("table")];
+  const result = [];
+  for (const table of tables) {
+    const rows = [...table.querySelectorAll("tr")];
+    for (const tr of rows) {
+      const cells = [...tr.querySelectorAll("th,td")].map(td => parseNumberText(td.textContent || ""));
+      if (cells.length >= 3 && !cells.join("|").includes("台番号")) {
+        const maybeNumber = cells[0];
+        if (/^\d{1,4}$/.test(maybeNumber)) {
+          result.push({
+            機種名: machineNameHint || "",
+            台番号: maybeNumber,
+            差枚数: cells[1] || "",
+            総回転数: cells[2] || "",
+          });
+        }
+      }
+    }
+  }
+  return result;
+}
+
+async function fetchText(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("取得失敗");
+  return await res.text();
+}
+
+async function fetchAndParse() {
+  const dailyUrl = el("dailyUrl").value.trim();
+  const machineUrl = el("machineUrl").value.trim();
+  try {
+    if (dailyUrl) {
+      const html = await fetchText(dailyUrl);
+      state.machineSummary = parseDailyHtml(html);
+    }
+    if (machineUrl) {
+      const html = await fetchText(machineUrl);
+      const name = decodeURIComponent(new URL(machineUrl).searchParams.get("kishu") || "");
+      state.machineDetail = parseMachineHtml(html, name);
+    }
+    renderMachineSummary();
+    renderMachineDetail();
+  } catch (e) {
+    alert("URL取得に失敗しました。CORS制限の可能性があります。HTML貼り付けを使ってください。");
+  }
+}
+
+function parseFromTextarea() {
+  const dailyHtml = el("dailyHtml").value;
+  const machineHtml = el("machineHtml").value;
+  if (dailyHtml) state.machineSummary = parseDailyHtml(dailyHtml);
+  if (machineHtml) state.machineDetail = parseMachineHtml(machineHtml);
+  renderMachineSummary();
+  renderMachineDetail();
+}
+
+function renderConfigEditor() {
+  const root = el("configEditor");
+  if (!state.config) {
+    root.innerHTML = "<p>まだテンプレが読み込まれていません。</p>";
+    return;
+  }
+  const blocks = state.config.machines.map((m, idx) => {
+    const inputs = m.numbers.map((n, i) => `
+      <label>${m.name} ${i+1}台目台番号
+        <input type="text" data-machine="${idx}" data-slot="${i}" value="${n || ''}" />
+      </label>
+    `).join("");
+    return `<details><summary>${m.name}（${m.count}台）</summary><div class="grid">${inputs}</div></details>`;
+  }).join("");
+  root.innerHTML = blocks;
+  root.querySelectorAll("input").forEach(inp => {
+    inp.addEventListener("input", (e) => {
+      const mi = Number(e.target.dataset.machine);
+      const si = Number(e.target.dataset.slot);
+      state.config.machines[mi].numbers[si] = e.target.value;
+    });
+  });
+}
+
+async function loadConfig() {
+  const res = await Promise.resolve({ json: async () => window.EMBEDDED_CONFIG });
+  state.config = await res.json();
+  renderConfigEditor();
+}
+
+function exportConfig() {
+  if (!state.config) return;
+  const blob = new Blob([JSON.stringify(state.config, null, 2)], {type: "application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "sunflower_config_export.json";
+  a.click();
+}
+
+function loadSample() {
+  state.machineSummary = [
+    {機種名:"スマスロ マギアレコード 魔法少女まどか☆マギカ外伝", 差枚数:"+12450", 平均回転数:"8012"},
+    {機種名:"L東京喰種", 差枚数:"+32100", 平均回転数:"8420"},
+  ];
+  state.machineDetail = [
+    {機種名:"スマスロ マギアレコード 魔法少女まどか☆マギカ外伝", 台番号:"001", 差枚数:"+2200", 総回転数:"7800"},
+    {機種名:"スマスロ マギアレコード 魔法少女まどか☆マギカ外伝", 台番号:"002", 差枚数:"+3400", 総回転数:"8150"},
+    {機種名:"スマスロ マギアレコード 魔法少女まどか☆マギカ外伝", 台番号:"003", 差枚数:"-800", 総回転数:"6600"},
+  ];
+  renderMachineSummary();
+  renderMachineDetail();
+}
+
+el("fetchBtn").addEventListener("click", fetchAndParse);
+el("parseBtn").addEventListener("click", parseFromTextarea);
+el("loadConfigBtn").addEventListener("click", loadConfig);
+el("exportConfigBtn").addEventListener("click", exportConfig);
+el("sampleBtn").addEventListener("click", loadSample);
+
+
+function starsText(n){
+  return "★".repeat(n) + "☆".repeat(Math.max(0, 6-n));
+}
+
+async function loadRecommendations() {
+  const root = el("recommendationsView");
+  const res = await Promise.resolve({ json: async () => window.EMBEDDED_RECOMMENDATIONS });
+  const data = await res.json();
+  const rows = data.machines.map(m => `
+    <tr>
+      <td>${m.name}</td>
+      <td>${starsText(m.stars)}</td>
+      <td>${m.numbers.join(" / ")}</td>
+      <td>${m.memo || ""}</td>
+    </tr>
+  `).join("");
+  root.innerHTML = `
+    <div class="note">${data.note}</div>
+    <table>
+      <thead><tr><th>機種</th><th>期待度</th><th>狙い台番号</th><th>メモ</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+const recoBtn = document.getElementById("loadRecoBtn");
+if (recoBtn) recoBtn.addEventListener("click", loadRecommendations);
+
+
+// ===== 安定化パーサー（過去7日間グラフ無視） =====
+function normalizeText(t){
+  return (t || "").replace(/\s+/g, " ").trim();
+}
+
+function isGraphOrHistoryHeading(text){
+  return /過去7日間|差枚\(G数\)|期間平均|特定日で絞る|累積差枚ランキング/.test(text);
+}
+
+function parseSignedNumber(text){
+  return normalizeText(text).replace(/,/g, "");
+}
+
+function uniqueBy(arr, keyFn){
+  const seen = new Set();
+  const out = [];
+  for (const x of arr){
+    const k = keyFn(x);
+    if (!seen.has(k)) {
+      seen.add(k);
+      out.push(x);
+    }
+  }
+  return out;
+}
+
+function parseDailyHtml(html) {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const tables = [...doc.querySelectorAll("table")];
+  const result = [];
+
+  for (const table of tables) {
+    const textAround = normalizeText(table.textContent || "");
+    if (isGraphOrHistoryHeading(textAround)) continue;
+
+    const rows = [...table.querySelectorAll("tr")];
+    for (const tr of rows) {
+      const cells = [...tr.querySelectorAll("th,td")].map(td => normalizeText(td.textContent || ""));
+      if (cells.length < 3) continue;
+      const joined = cells.join("|");
+      if (/台番|期間平均|過去7日間|差枚\(G数\)/.test(joined)) continue;
+
+      // 期待する形式: 機種名 / 差枚数 / 平均回転数
+      const machine = cells[0];
+      const diff = cells[1];
+      const games = cells[2];
+
+      if (!machine) continue;
+      if (!/[+-]?\d|,/.test(diff)) continue;
+      if (!/\d/.test(games)) continue;
+      if (/^\d+$/.test(machine)) continue; // 台番号だけの表は除外
+
+      result.push({
+        機種名: machine,
+        差枚数: parseSignedNumber(diff),
+        平均回転数: normalizeText(games).replace(/,/g, ""),
+      });
+    }
+  }
+
+  return uniqueBy(result, x => x.機種名);
+}
+
+function parseMachineHtml(html, machineNameHint="") {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const tables = [...doc.querySelectorAll("table")];
+  const result = [];
+
+  for (const table of tables) {
+    const textAround = normalizeText(table.textContent || "");
+    if (isGraphOrHistoryHeading(textAround)) continue;
+
+    const rows = [...table.querySelectorAll("tr")];
+    for (const tr of rows) {
+      const cells = [...tr.querySelectorAll("th,td")].map(td => normalizeText(td.textContent || ""));
+      if (cells.length < 3) continue;
+
+      const joined = cells.join("|");
+      if (/台番|期間平均|過去7日間|差枚\(G数\)/.test(joined)) continue;
+
+      // 期待する形式: 台番号 / 差枚数 / 総回転数
+      const maybeNumber = cells[0];
+      const diff = cells[1];
+      const games = cells[2];
+
+      if (!/^\d{1,4}$/.test(maybeNumber)) continue;
+      if (!/[+-]?\d|,/.test(diff)) continue;
+      if (!/\d/.test(games)) continue;
+
+      // グラフ表は日付列が多いので除外
+      if (cells.length > 5) continue;
+
+      result.push({
+        機種名: machineNameHint || "",
+        台番号: maybeNumber.padStart(4, "0"),
+        差枚数: parseSignedNumber(diff),
+        総回転数: normalizeText(games).replace(/,/g, ""),
+      });
+    }
+  }
+
+  return uniqueBy(result, x => `${x.機種名}-${x.台番号}`);
+}
+
+// ===== 設定予測エンジン =====
+function modeBoost(machineName, mode){
+  const eventStrong = ["ヴァルヴレイヴ2","旧ヴァルヴレイヴ","東京喰種","新台カバネリ","スマスロ北斗","北斗転生2","モンキーターンV"];
+  const normalStrong = ["バンドリ","無職転生","戦国乙女","スーパーブラックジャック","メダル機カバネリ","エウレカセブン","防振り"];
+  if (mode === "event" && eventStrong.includes(machineName)) return 1;
+  if (mode === "normal" && normalStrong.includes(machineName)) return 1;
+  return 0;
+}
+
+function categoryLabel(score){
+  if (score >= 6) return "本命";
+  if (score >= 5) return "対抗";
+  if (score >= 4) return "抑え";
+  return "様子見";
+}
+
+async function runPredictionEngine() {
+  const mode = el("predictionMode").value;
+  const root = el("predictionView");
+  const recoRes = await Promise.resolve({ json: async () => window.EMBEDDED_RECOMMENDATIONS });
+  const reco = await recoRes.json();
+
+  const ranked = reco.machines.map(m => {
+    let score = m.stars + modeBoost(m.name, mode);
+    if (mode === "normal" && ["東京喰種","新台カバネリ","スマスロ北斗"].includes(m.name)) score -= 1;
+    if (mode === "event" && ["キングハナハナ","ドラゴンハナハナ閃光","スターハナハナ"].includes(m.name)) score -= 1;
+    score = Math.max(1, Math.min(6, score));
+    return {
+      ...m,
+      score,
+      category: categoryLabel(score)
+    };
+  }).sort((a,b) => b.score - a.score || a.name.localeCompare(b.name, "ja"));
+
+  const buckets = ["本命","対抗","抑え","様子見"];
+  root.innerHTML = buckets.map(bucket => {
+    const items = ranked.filter(x => x.category === bucket);
+    if (!items.length) return "";
+    const rows = items.map(x => `
+      <tr>
+        <td>${x.name}</td>
+        <td>${"★".repeat(x.score)}${"☆".repeat(6-x.score)}</td>
+        <td>${x.numbers.join(" / ")}</td>
+        <td>${x.memo || ""}</td>
+      </tr>
+    `).join("");
+    return `
+      <h3>${bucket}</h3>
+      <table>
+        <thead><tr><th>機種</th><th>期待度</th><th>次に狙う台番号</th><th>理由</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }).join("");
+}
+
+const predBtn = document.getElementById("runPredictionBtn");
+if (predBtn) predBtn.addEventListener("click", runPredictionEngine);
+
+
+// ===== ホール日別差枚ビュー =====
+function looksLikeDateText(s){
+  return /\d{1,2}\/\d{1,2}|\d{4}-\d{1,2}-\d{1,2}|\(\w+\)|月|火|水|木|金|土|日/.test(s);
+}
+
+function parseHoleDailyHtml(html){
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const tables = [...doc.querySelectorAll("table")];
+  const rowsOut = [];
+
+  for (const table of tables){
+    const textAround = normalizeText(table.textContent || "");
+    // 7日間表や機種個別表は除外
+    if (isGraphOrHistoryHeading(textAround)) continue;
+
+    const rows = [...table.querySelectorAll("tr")];
+    if (!rows.length) continue;
+
+    // header row must contain date-like columns and not machine names only
+    const headerCells = [...rows[0].querySelectorAll("th,td")].map(td => normalizeText(td.textContent || ""));
+    const dateLikeCount = headerCells.filter(looksLikeDateText).length;
+    if (dateLikeCount < 2) continue;
+
+    for (let i=1; i<rows.length; i++){
+      const cells = [...rows[i].querySelectorAll("th,td")].map(td => normalizeText(td.textContent || ""));
+      if (cells.length < 3) continue;
+      // first cell should be machine name or category, not a pure number
+      if (/^\d+$/.test(cells[0])) continue;
+      const item = { 機種名: cells[0] };
+      for (let j=1; j<Math.min(cells.length, headerCells.length); j++){
+        const header = headerCells[j] || `列${j}`;
+        item[header] = cells[j];
+      }
+      rowsOut.push(item);
+    }
+  }
+  return rowsOut;
+}
+
+function renderHoleDailyView(rows){
+  const root = el("holeDailyView");
+  if (!rows || !rows.length){
+    root.innerHTML = "<p>まだホール日別差枚データがありません。</p>";
+    return;
+  }
+  const headers = Object.keys(rows[0]);
+  const thead = headers.map(h => `<th>${h}</th>`).join("");
+  const body = rows.map(r => `<tr>${headers.map(h => `<td>${r[h] ?? ""}</td>`).join("")}</tr>`).join("");
+  root.innerHTML = `<table><thead><tr>${thead}</tr></thead><tbody>${body}</tbody></table>`;
+}
+
+// ===== タブ切替 =====
+function switchTab(name){
+  const tabs = {
+    hole: document.getElementById("tabHoleBtn"),
+    machine: document.getElementById("tabMachineBtn"),
+    detail: document.getElementById("tabDetailBtn")
+  };
+  const panels = {
+    hole: document.getElementById("holeDailyView"),
+    machine: document.getElementById("machineSummary"),
+    detail: document.getElementById("machineDetail")
+  };
+  Object.keys(tabs).forEach(k => {
+    tabs[k].classList.toggle("active", k === name);
+    panels[k].style.display = k === name ? "" : "none";
+  });
+}
+
+document.getElementById("tabHoleBtn")?.addEventListener("click", () => switchTab("hole"));
+document.getElementById("tabMachineBtn")?.addEventListener("click", () => switchTab("machine"));
+document.getElementById("tabDetailBtn")?.addEventListener("click", () => switchTab("detail"));
+
+// parseFromTextarea を差し替え
+parseFromTextarea = function() {
+  const dailyHtml = el("dailyHtml").value;
+  const machineHtml = el("machineHtml").value;
+  if (dailyHtml) {
+    state.holeDaily = parseHoleDailyHtml(dailyHtml);
+    state.machineSummary = parseDailyHtml(dailyHtml).filter(x => !looksLikeDateText(x.機種名));
+  }
+  if (machineHtml) state.machineDetail = parseMachineHtml(machineHtml);
+  renderHoleDailyView(state.holeDaily || []);
+  renderMachineSummary();
+  renderMachineDetail();
+  switchTab("hole");
+};
+
+// fetchAndParse も差し替え
+fetchAndParse = async function() {
+  const dailyUrl = el("dailyUrl").value.trim();
+  const machineUrl = el("machineUrl").value.trim();
+  try {
+    if (dailyUrl) {
+      const html = await fetchText(dailyUrl);
+      state.holeDaily = parseHoleDailyHtml(html);
+      state.machineSummary = parseDailyHtml(html).filter(x => !looksLikeDateText(x.機種名));
+    }
+    if (machineUrl) {
+      const html = await fetchText(machineUrl);
+      const name = decodeURIComponent(new URL(machineUrl).searchParams.get("kishu") || "");
+      state.machineDetail = parseMachineHtml(html, name);
+    }
+    renderHoleDailyView(state.holeDaily || []);
+    renderMachineSummary();
+    renderMachineDetail();
+    switchTab("hole");
+  } catch (e) {
+    alert("URL取得に失敗しました。CORS制限の可能性があります。HTML貼り付けを使ってください。");
+  }
+};
+
+// ボタン再接続
+document.getElementById("fetchBtn")?.addEventListener("click", fetchAndParse);
+document.getElementById("parseBtn")?.addEventListener("click", parseFromTextarea);
+
+
+// ===== HTMLファイル読込 =====
+async function readTextFile(file){
+  return await file.text();
+}
+async function parseFromFiles(){
+  const dailyFile = document.getElementById("dailyHtmlFile")?.files?.[0];
+  const machineFile = document.getElementById("machineHtmlFile")?.files?.[0];
+  if (!dailyFile && !machineFile){
+    alert("HTMLファイルを選んでください。");
+    return;
+  }
+  if (dailyFile){
+    const html = await readTextFile(dailyFile);
+    if (typeof parseHoleDailyHtml === "function") {
+      state.holeDaily = parseHoleDailyHtml(html);
+      if (typeof renderHoleDailyView === "function") renderHoleDailyView(state.holeDaily || []);
+    }
+    if (typeof parseDailyHtml === "function") {
+      state.machineSummary = parseDailyHtml(html).filter(x => !looksLikeDateText(x.機種名));
+    }
+  }
+  if (machineFile){
+    const html = await readTextFile(machineFile);
+    state.machineDetail = parseMachineHtml(html);
+  }
+  if (typeof renderMachineSummary === "function") renderMachineSummary();
+  if (typeof renderMachineDetail === "function") renderMachineDetail();
+  if (typeof switchTab === "function") switchTab("hole");
+}
+document.getElementById("parseFileBtn")?.addEventListener("click", parseFromFiles);
+
+// ===== ローカルDB =====
+function toIntSafe(v){
+  if (v === null || v === undefined) return 0;
+  const s = String(v).replace(/,/g, "").replace(/[^\d\-+]/g, "");
+  return s ? parseInt(s, 10) : 0;
+}
+function getDb(){
+  try { return JSON.parse(localStorage.getItem("sunflower_db_v1") || "[]"); }
+  catch { return []; }
+}
+function setDb(rows){
+  localStorage.setItem("sunflower_db_v1", JSON.stringify(rows));
+}
+function saveCurrentSession(){
+  const date = document.getElementById("saveDate").value.trim();
+  const label = document.getElementById("saveLabel").value.trim();
+  if (!date){
+    alert("保存日付を入れてください。");
+    return;
+  }
+  if (!state.machineDetail || !state.machineDetail.length){
+    alert("保存する台一覧データがありません。機種個別HTMLを読み込んでください。");
+    return;
+  }
+  const db = getDb();
+  const rows = state.machineDetail.map(r => ({
+    date,
+    label,
+    machine: r.機種名 || "",
+    number: (r.台番号 || "").toString().padStart(4,"0"),
+    diff: toIntSafe(r.差枚数),
+    games: toIntSafe(r.総回転数)
+  }));
+  const key = x => `${x.date}|${x.machine}|${x.number}`;
+  const map = new Map(db.map(x => [key(x), x]));
+  rows.forEach(x => map.set(key(x), x));
+  const merged = [...map.values()].sort((a,b) => (a.date+a.machine+a.number).localeCompare(b.date+b.machine+b.number, "ja"));
+  setDb(merged);
+  alert(`保存しました: ${date} / ${rows[0].machine} / ${rows.length}台`);
+}
+function renderDb(){
+  const root = document.getElementById("dbView");
+  const db = getDb();
+  if (!db.length){
+    root.innerHTML = "<p>保存データはまだありません。</p>";
+    return;
+  }
+  const summary = {};
+  db.forEach(r => {
+    const k = `${r.date}｜${r.label || "ラベルなし"}｜${r.machine}`;
+    summary[k] = (summary[k] || 0) + 1;
+  });
+  const rows = Object.entries(summary).map(([k,v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join("");
+  root.innerHTML = `<table><thead><tr><th>保存単位</th><th>件数</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+function clearDb(){
+  localStorage.removeItem("sunflower_db_v1");
+  renderDb();
+}
+document.getElementById("saveSessionBtn")?.addEventListener("click", saveCurrentSession);
+document.getElementById("showDbBtn")?.addEventListener("click", renderDb);
+document.getElementById("clearDbBtn")?.addEventListener("click", clearDb);
+
+// ===== 予測エンジンを保存DB対応に差し替え =====
+runPredictionEngine = async function() {
+  const mode = el("predictionMode").value;
+  const root = el("predictionView");
+  const recoRes = await Promise.resolve({ json: async () => window.EMBEDDED_RECOMMENDATIONS });
+  const reco = await recoRes.json();
+  const db = getDb();
+
+  const ranked = reco.machines.map(m => {
+    let score = m.stars + modeBoost(m.name, mode);
+
+    const related = db.filter(x => x.machine === m.name);
+    const avgDiff = related.length ? related.reduce((a,b)=>a+b.diff,0)/related.length : 0;
+    const hotCount = related.filter(x => x.diff >= 1500 || x.games >= 5000).length;
+
+    if (avgDiff >= 1000) score += 0.5;
+    if (avgDiff <= -1000) score -= 0.5;
+    if (hotCount >= 2) score += 0.5;
+
+    if (mode === "normal" && ["東京喰種","新台カバネリ","スマスロ北斗"].includes(m.name)) score -= 1;
+    if (mode === "event" && ["キングハナハナ","ドラゴンハナハナ閃光","スターハナハナ"].includes(m.name)) score -= 1;
+
+    score = Math.max(1, Math.min(6, score));
+    return {
+      ...m,
+      score,
+      category: categoryLabel(score),
+      avgDiff: Math.round(avgDiff),
+      hitCount: hotCount
+    };
+  }).sort((a,b) => b.score - a.score || b.avgDiff - a.avgDiff);
+
+  const buckets = ["本命","対抗","抑え","様子見"];
+  root.innerHTML = buckets.map(bucket => {
+    const items = ranked.filter(x => x.category === bucket);
+    if (!items.length) return "";
+    const rows = items.map(x => `
+      <tr>
+        <td>${x.name}</td>
+        <td>${"★".repeat(x.score)}${"☆".repeat(6-x.score)}</td>
+        <td>${x.numbers.join(" / ")}</td>
+        <td>${x.memo || ""}<br>保存平均差枚: ${x.avgDiff} / ヒット件数: ${x.hitCount}</td>
+      </tr>
+    `).join("");
+    return `
+      <h3>${bucket}</h3>
+      <table>
+        <thead><tr><th>機種</th><th>期待度</th><th>次に狙う台番号</th><th>理由</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }).join("");
+}
+document.getElementById("runPredictionBtn")?.addEventListener("click", runPredictionEngine);
+
+
+// ===== 答え合わせDB =====
+function getAnswersDb(){
+  try { return JSON.parse(localStorage.getItem("sunflower_answers_v1") || "[]"); }
+  catch { return []; }
+}
+function setAnswersDb(rows){
+  localStorage.setItem("sunflower_answers_v1", JSON.stringify(rows));
+}
+function saveHtmlAnswer(){
+  const date = document.getElementById("answerDateHtml").value.trim();
+  const label = document.getElementById("answerLabelHtml").value.trim();
+  if (!date){
+    alert("答え合わせ日付を入れてください。");
+    return;
+  }
+  if (!state.machineDetail || !state.machineDetail.length){
+    alert("保存する台一覧がありません。機種個別HTMLを読み込んでください。");
+    return;
+  }
+  const db = getAnswersDb();
+  const rows = state.machineDetail.map(r => ({
+    source: "html",
+    date,
+    label,
+    machine: r.機種名 || "",
+    number: (r.台番号 || "").toString().padStart(4,"0"),
+    games: toIntSafe(r.総回転数),
+    diff: toIntSafe(r.差枚数),
+    bb: toIntSafe(r.BB || r.bb || 0),
+    rb: toIntSafe(r.RB || r.rb || 0),
+    result: "未評価",
+    memo: "HTML参照"
+  }));
+  const key = x => `${x.source}|${x.date}|${x.machine}|${x.number}`;
+  const map = new Map(db.map(x => [key(x), x]));
+  rows.forEach(x => map.set(key(x), x));
+  setAnswersDb([...map.values()]);
+  alert(`HTML答え合わせ保存: ${date} / ${rows[0].machine} / ${rows.length}台`);
+}
+
+function saveManualAnswer(){
+  const row = {
+    source: "manual",
+    date: document.getElementById("manualDate").value.trim(),
+    machine: document.getElementById("manualMachine").value.trim(),
+    number: document.getElementById("manualNumber").value.trim().padStart(4,"0"),
+    games: toIntSafe(document.getElementById("manualGames").value),
+    bb: toIntSafe(document.getElementById("manualBB").value),
+    rb: toIntSafe(document.getElementById("manualRB").value),
+    diff: toIntSafe(document.getElementById("manualDiff").value),
+    result: document.getElementById("manualResult").value,
+    memo: document.getElementById("manualMemo").value.trim()
+  };
+  if (!row.date || !row.machine || !row.number){
+    alert("日付・機種名・台番号を入れてください。");
+    return;
+  }
+  const db = getAnswersDb();
+  const key = x => `${x.source}|${x.date}|${x.machine}|${x.number}`;
+  const map = new Map(db.map(x => [key(x), x]));
+  map.set(key(row), row);
+  setAnswersDb([...map.values()]);
+  alert(`実戦データ保存: ${row.date} / ${row.machine} / ${row.number}`);
+}
+
+function renderAnswers(){
+  const root = document.getElementById("answersView");
+  const db = getAnswersDb();
+  if (!db.length){
+    root.innerHTML = "<p>答え合わせ履歴はまだありません。</p>";
+    return;
+  }
+  const rows = db
+    .sort((a,b) => (a.date + a.machine + a.number).localeCompare(b.date + b.machine + b.number, "ja"))
+    .map(r => `
+      <tr>
+        <td>${r.date || ""}</td>
+        <td>${r.source || ""}</td>
+        <td>${r.machine || ""}</td>
+        <td>${r.number || ""}</td>
+        <td>${r.games || ""}</td>
+        <td>${r.bb || ""}</td>
+        <td>${r.rb || ""}</td>
+        <td>${r.diff || ""}</td>
+        <td>${r.result || ""}</td>
+        <td>${r.memo || ""}</td>
+      </tr>
+    `).join("");
+  root.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th>日付</th><th>元データ</th><th>機種</th><th>台番号</th><th>G数</th><th>BB</th><th>RB</th><th>差枚</th><th>結果</th><th>メモ</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+function clearAnswers(){
+  localStorage.removeItem("sunflower_answers_v1");
+  renderAnswers();
+}
+
+document.getElementById("saveHtmlAnswerBtn")?.addEventListener("click", saveHtmlAnswer);
+document.getElementById("saveManualAnswerBtn")?.addEventListener("click", saveManualAnswer);
+document.getElementById("showAnswersBtn")?.addEventListener("click", renderAnswers);
+document.getElementById("clearAnswersBtn")?.addEventListener("click", clearAnswers);
+
+// ===== 予測エンジンに答え合わせ補正を追加 =====
+runPredictionEngine = async function() {
+  const mode = el("predictionMode").value;
+  const root = el("predictionView");
+  const recoRes = await Promise.resolve({ json: async () => window.EMBEDDED_RECOMMENDATIONS });
+  const reco = await recoRes.json();
+  const db = (typeof getDb === "function") ? getDb() : [];
+  const answers = getAnswersDb();
+
+  const ranked = reco.machines.map(m => {
+    let score = m.stars + modeBoost(m.name, mode);
+
+    const related = db.filter(x => x.machine === m.name);
+    const avgDiff = related.length ? related.reduce((a,b)=>a+b.diff,0)/related.length : 0;
+    const hotCount = related.filter(x => x.diff >= 1500 || x.games >= 5000).length;
+
+    const answerRows = answers.filter(x => x.machine === m.name);
+    const good = answerRows.filter(x => ["6確","56濃厚","高設定っぽい"].includes(x.result)).length;
+    const bad = answerRows.filter(x => ["低設定っぽい","ハズレ"].includes(x.result)).length;
+
+    if (avgDiff >= 1000) score += 0.5;
+    if (avgDiff <= -1000) score -= 0.5;
+    if (hotCount >= 2) score += 0.5;
+
+    if (good >= 2) score += 0.5;
+    if (bad >= 2) score -= 0.5;
+
+    if (mode === "normal" && ["東京喰種","新台カバネリ","スマスロ北斗"].includes(m.name)) score -= 1;
+    if (mode === "event" && ["キングハナハナ","ドラゴンハナハナ閃光","スターハナハナ"].includes(m.name)) score -= 1;
+
+    score = Math.max(1, Math.min(6, score));
+    return {
+      ...m,
+      score,
+      category: categoryLabel(score),
+      avgDiff: Math.round(avgDiff),
+      hitCount: hotCount,
+      good,
+      bad
+    };
+  }).sort((a,b) => b.score - a.score || b.avgDiff - a.avgDiff);
+
+  const buckets = ["本命","対抗","抑え","様子見"];
+  root.innerHTML = buckets.map(bucket => {
+    const items = ranked.filter(x => x.category === bucket);
+    if (!items.length) return "";
+    const rows = items.map(x => `
+      <tr>
+        <td>${x.name}</td>
+        <td>${"★".repeat(x.score)}${"☆".repeat(6-x.score)}</td>
+        <td>${x.numbers.join(" / ")}</td>
+        <td>${x.memo || ""}<br>保存平均差枚: ${x.avgDiff} / ヒット件数: ${x.hitCount} / 答え合わせ○: ${x.good} / ×: ${x.bad}</td>
+      </tr>
+    `).join("");
+    return `
+      <h3>${bucket}</h3>
+      <table>
+        <thead><tr><th>機種</th><th>期待度</th><th>次に狙う台番号</th><th>理由</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }).join("");
+}
+
+
+// ===== トロフィー入力対応 =====
+function trophyToResult(trophy, currentResult){
+  if (trophy === "虹トロ") return "6確";
+  if (trophy === "5以上確定トロ") return "56濃厚";
+  if (trophy === "金トロ") return "高設定っぽい";
+  if (trophy === "トロフィー無し") return "ハズレ";
+  return currentResult;
+}
+
+// saveManualAnswer を差し替え
+saveManualAnswer = function(){
+  const trophy = document.getElementById("manualTrophy").value;
+  const derivedResult = trophyToResult(trophy, document.getElementById("manualResult").value);
+  const row = {
+    source: "manual",
+    date: document.getElementById("manualDate").value.trim(),
+    machine: document.getElementById("manualMachine").value.trim(),
+    number: document.getElementById("manualNumber").value.trim().padStart(4,"0"),
+    games: toIntSafe(document.getElementById("manualGames").value),
+    bb: toIntSafe(document.getElementById("manualBB").value),
+    rb: toIntSafe(document.getElementById("manualRB").value),
+    diff: toIntSafe(document.getElementById("manualDiff").value),
+    trophy: trophy,
+    result: derivedResult,
+    memo: document.getElementById("manualMemo").value.trim()
+  };
+  if (!row.date || !row.machine || !row.number){
+    alert("日付・機種名・台番号を入れてください。");
+    return;
+  }
+  const db = getAnswersDb();
+  const key = x => `${x.source}|${x.date}|${x.machine}|${x.number}`;
+  const map = new Map(db.map(x => [key(x), x]));
+  map.set(key(row), row);
+  setAnswersDb([...map.values()]);
+  alert(`実戦データ保存: ${row.date} / ${row.machine} / ${row.number}`);
+};
+
+// 既存イベントを再接続
+document.getElementById("saveManualAnswerBtn")?.addEventListener("click", saveManualAnswer);
+
+// renderAnswers を差し替え
+renderAnswers = function(){
+  const root = document.getElementById("answersView");
+  const db = getAnswersDb();
+  if (!db.length){
+    root.innerHTML = "<p>答え合わせ履歴はまだありません。</p>";
+    return;
+  }
+  const rows = db
+    .sort((a,b) => (a.date + a.machine + a.number).localeCompare(b.date + b.machine + b.number, "ja"))
+    .map(r => `
+      <tr>
+        <td>${r.date || ""}</td>
+        <td>${r.source || ""}</td>
+        <td>${r.machine || ""}</td>
+        <td>${r.number || ""}</td>
+        <td>${r.games || ""}</td>
+        <td>${r.bb || ""}</td>
+        <td>${r.rb || ""}</td>
+        <td>${r.diff || ""}</td>
+        <td>${r.trophy || ""}</td>
+        <td>${r.result || ""}</td>
+        <td>${r.memo || ""}</td>
+      </tr>
+    `).join("");
+  root.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th>日付</th><th>元データ</th><th>機種</th><th>台番号</th><th>G数</th><th>BB</th><th>RB</th><th>差枚</th><th>トロフィー</th><th>結果</th><th>メモ</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+};
+document.getElementById("showAnswersBtn")?.addEventListener("click", renderAnswers);
+
+
+// ===== v12: トロフィー評価修正 + 台番号成功率マップ =====
+function trophyToResultV12(trophy, currentResult){
+  if (trophy === "虹トロ") return "6確";
+  if (trophy === "5以上確定トロ") return "56濃厚";
+  if (trophy === "金トロ") return "456以上濃厚";
+  if (trophy === "トロフィー無し") return currentResult || "判定なし";
+  return currentResult;
+}
+
+// saveManualAnswer を再差し替え
+saveManualAnswer = function(){
+  const trophy = document.getElementById("manualTrophy").value;
+  const selectedResult = document.getElementById("manualResult").value;
+  const derivedResult = trophyToResultV12(trophy, selectedResult);
+  const row = {
+    source: "manual",
+    date: document.getElementById("manualDate").value.trim(),
+    machine: document.getElementById("manualMachine").value.trim(),
+    number: document.getElementById("manualNumber").value.trim().padStart(4,"0"),
+    games: toIntSafe(document.getElementById("manualGames").value),
+    bb: toIntSafe(document.getElementById("manualBB").value),
+    rb: toIntSafe(document.getElementById("manualRB").value),
+    diff: toIntSafe(document.getElementById("manualDiff").value),
+    trophy: trophy,
+    result: derivedResult,
+    memo: document.getElementById("manualMemo").value.trim()
+  };
+  if (!row.date || !row.machine || !row.number){
+    alert("日付・機種名・台番号を入れてください。");
+    return;
+  }
+  const db = getAnswersDb();
+  const key = x => `${x.source}|${x.date}|${x.machine}|${x.number}`;
+  const map = new Map(db.map(x => [key(x), x]));
+  map.set(key(row), row);
+  setAnswersDb([...map.values()]);
+  alert(`実戦データ保存: ${row.date} / ${row.machine} / ${row.number}`);
+};
+
+// 台番号成功率
+function answerScore(result){
+  if (result === "6確") return 1.0;
+  if (result === "56濃厚") return 0.9;
+  if (result === "456以上濃厚") return 0.7;
+  if (result === "高設定っぽい") return 0.6;
+  if (result === "中間っぽい") return 0.3;
+  if (result === "低設定っぽい") return 0.1;
+  if (result === "ハズレ") return 0.0;
+  return null; // 判定なしは学習に使わない
+}
+
+function buildNumberSuccessMap(){
+  const answers = getAnswersDb();
+  const map = {};
+  for (const a of answers){
+    const score = answerScore(a.result);
+    if (score === null) continue;
+    const key = `${a.machine}|${a.number}`;
+    if (!map[key]) map[key] = {machine: a.machine, number: a.number, sum: 0, cnt: 0};
+    map[key].sum += score;
+    map[key].cnt += 1;
+  }
+  return Object.values(map).map(x => ({
+    machine: x.machine,
+    number: x.number,
+    rate: x.cnt ? x.sum / x.cnt : 0,
+    cnt: x.cnt
+  }));
+}
+
+function renderNumberMap(rows){
+  if (!rows.length) return "<p>台番号ごとの答え合わせデータはまだありません。</p>";
+  const body = rows.map(r => `
+    <tr>
+      <td>${r.machine}</td>
+      <td>${r.number}</td>
+      <td>${(r.rate*100).toFixed(0)}%</td>
+      <td>${r.cnt}</td>
+    </tr>
+  `).join("");
+  return `
+    <table>
+      <thead><tr><th>機種</th><th>台番号</th><th>成功率目安</th><th>件数</th></tr></thead>
+      <tbody>${body}</tbody>
+    </table>
+  `;
+}
+
+// 予測エンジンを台番号成功率込みで再差し替え
+runPredictionEngine = async function() {
+  const mode = el("predictionMode").value;
+  const root = el("predictionView");
+  const recoRes = await Promise.resolve({ json: async () => window.EMBEDDED_RECOMMENDATIONS });
+  const reco = await recoRes.json();
+  const db = (typeof getDb === "function") ? getDb() : [];
+  const answers = getAnswersDb();
+  const numberMap = buildNumberSuccessMap();
+
+  const ranked = reco.machines.map(m => {
+    let score = m.stars + modeBoost(m.name, mode);
+
+    const related = db.filter(x => x.machine === m.name);
+    const avgDiff = related.length ? related.reduce((a,b)=>a+b.diff,0)/related.length : 0;
+    const hotCount = related.filter(x => x.diff >= 1500 || x.games >= 5000).length;
+
+    const answerRows = answers.filter(x => x.machine === m.name);
+    const good = answerRows.filter(x => ["6確","56濃厚","456以上濃厚","高設定っぽい"].includes(x.result)).length;
+    const bad = answerRows.filter(x => ["低設定っぽい","ハズレ"].includes(x.result)).length;
+
+    const numRates = numberMap.filter(x => x.machine === m.name && m.numbers.includes(x.number));
+    const bestNumbers = numRates.sort((a,b) => b.rate - a.rate).slice(0, 3);
+
+    if (avgDiff >= 1000) score += 0.5;
+    if (avgDiff <= -1000) score -= 0.5;
+    if (hotCount >= 2) score += 0.5;
+
+    if (good >= 2) score += 0.5;
+    if (bad >= 2) score -= 0.5;
+    if (bestNumbers.length && bestNumbers[0].rate >= 0.7) score += 0.5;
+
+    if (mode === "normal" && ["東京喰種","新台カバネリ","スマスロ北斗"].includes(m.name)) score -= 1;
+    if (mode === "event" && ["キングハナハナ","ドラゴンハナハナ閃光","スターハナハナ"].includes(m.name)) score -= 1;
+
+    score = Math.max(1, Math.min(6, score));
+    return {
+      ...m,
+      score,
+      category: categoryLabel(score),
+      avgDiff: Math.round(avgDiff),
+      hitCount: hotCount,
+      good,
+      bad,
+      bestNumbers
+    };
+  }).sort((a,b) => b.score - a.score || b.avgDiff - a.avgDiff);
+
+  const buckets = ["本命","対抗","抑え","様子見"];
+  root.innerHTML = buckets.map(bucket => {
+    const items = ranked.filter(x => x.category === bucket);
+    if (!items.length) return "";
+    const rows = items.map(x => {
+      const best = x.bestNumbers.length
+        ? "<br>台番号成功率: " + x.bestNumbers.map(n => `${n.number}(${(n.rate*100).toFixed(0)}%)`).join(" / ")
+        : "";
+      return `
+      <tr>
+        <td>${x.name}</td>
+        <td>${"★".repeat(x.score)}${"☆".repeat(6-x.score)}</td>
+        <td>${x.numbers.join(" / ")}</td>
+        <td>${x.memo || ""}<br>保存平均差枚: ${x.avgDiff} / ヒット件数: ${x.hitCount} / 答え合わせ○: ${x.good} / ×: ${x.bad}${best}</td>
+      </tr>`;
+    }).join("");
+    return `
+      <h3>${bucket}</h3>
+      <table>
+        <thead><tr><th>機種</th><th>期待度</th><th>次に狙う台番号</th><th>理由</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }).join("") + `<h3>台番号成功率マップ</h3>${renderNumberMap(numberMap.sort((a,b)=>b.rate-a.rate || b.cnt-a.cnt).slice(0, 50))}`;
+}
+document.getElementById("runPredictionBtn")?.addEventListener("click", runPredictionEngine);
+
+</script>
 </body>
 </html>
